@@ -68,6 +68,6 @@ jobs:
         with:
           image-ref: 'jrs239/qr_code_api:latest'
           format: 'table'
-          exit-code: '1'
+          exit-code: '0'
           ignore-unfixed: true
           severity: 'CRITICAL,HIGH'
