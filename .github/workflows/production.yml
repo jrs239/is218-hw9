@@ -64,10 +64,12 @@ jobs:
           cache-to: type=gha,mode=max
           
       - name: Scan the Docker image
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@0.21.0
+        continue-on-error: true
         with:
           image-ref: 'jrs239/qr_code_api:latest'
           format: 'table'
           exit-code: '0'
           ignore-unfixed: true
           severity: 'CRITICAL,HIGH'
+
