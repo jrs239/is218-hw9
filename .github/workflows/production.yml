@@ -60,8 +60,9 @@ jobs:
           push: true
           tags: jrs239/qr_code_api:latest
           platforms: linux/amd64,linux/arm64 # Multi-platform support
-          cache-from: type=registry,ref=jrs239/qr_code_api:cache
-          cache-to: type=inline,mode=max
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
           
       - name: Scan the Docker image
         uses: aquasecurity/trivy-action@master
